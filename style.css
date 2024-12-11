@@ -1,0 +1,179 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e3ffe7, #d9e7ff); /* Soothing gradient */
+  overflow: hidden;
+}
+
+/* Animated Background Circles */
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  animation: floating 6s ease-in-out infinite;
+}
+
+.circle:nth-child(1) {
+  width: 200px;
+  height: 200px;
+  top: 20%;
+  left: 5%;
+  background: #ffd6e8;
+  animation-duration: 8s;
+}
+
+.circle:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  bottom: 20%;
+  right: 5%;
+  background: #e7f0ff;
+  animation-duration: 7s;
+}
+
+.circle:nth-child(3) {
+  width: 170px;
+  height: 170px;
+  top: 60%;
+  right: 15%;
+  background: #d4ffea;
+  animation-duration: 9s;
+}
+
+/* Login Form */
+form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+form h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #5c5c8a;
+}
+
+/* Input Fields */
+form input {
+  width: 100%;
+  padding: 15px;
+  margin: 12px 0;
+  border: 2px solid #d1d1e0;
+  border-radius: 15px;
+  background: #f9f9fc;
+  color: #5c5c8a;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+form input:focus {
+  border-color: #89d4cf;
+  box-shadow: 0 0 15px rgba(137, 212, 207, 0.5);
+  background: #eaf7f3;
+  transform: scale(1.05);
+}
+
+/* Buttons */
+form button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border: none;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  color: white;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(229, 46, 113, 0.5);
+}
+
+/* Links */
+form a {
+  display: block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #6a6afc;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+form a:hover {
+  color: #4343d1;
+}
+
+/* Placeholder Styling */
+form input::placeholder {
+  color: #b0b0b0;
+  font-style: italic;
+  transition: color 0.3s ease;
+}
+
+form input:focus::placeholder {
+  color: #5c5c8a;
+}
+
+/* Additional Effects for 'Forgot Password' and 'Sign Up' links */
+form a.forgot-password {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+form a.forgot-password:hover {
+  color: #ff8a00;
+}
+
+form a.signup {
+  color: #4f7dff;
+  font-weight: bold;
+}
+
+form a.signup:hover {
+  color: #ff8a00;
+  text-decoration: underline;
+} 
